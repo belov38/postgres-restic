@@ -3,8 +3,6 @@ FROM postgres:16
 RUN apt-get update && apt-get install -y \
     restic \
     s3cmd \
-    python3-pip \
-    && pip3 install --upgrade awscli \
     && rm -rf /var/lib/apt/lists/*
 
 ENV POSTGRES_DB="**None**" \
